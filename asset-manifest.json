@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/endword/static/css/main.cf9cada1.css",
+    "main.js": "/endword/static/js/main.d49d0406.js",
+    "index.html": "/endword/index.html",
+    "main.cf9cada1.css.map": "/endword/static/css/main.cf9cada1.css.map",
+    "main.d49d0406.js.map": "/endword/static/js/main.d49d0406.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cf9cada1.css",
+    "static/js/main.d49d0406.js"
+  ]
+}
