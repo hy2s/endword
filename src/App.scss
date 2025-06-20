@@ -1,0 +1,108 @@
+@import url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/subsets/Paperlogy-dynamic-subset.css");
+/**** scss ****/
+@import "./styles/variable.scss";
+@import "./styles/mixin.scss";
+@import "./styles/reset.scss";
+
+body{
+  font-family: "Paperlogy", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;  
+}
+
+//body > #root
+#root{
+  height: 100vh;
+  background: linear-gradient(to bottom, #245854, #071f1d);
+  @include flex-center;
+}
+
+//body > #root > .app
+.app{
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  color: var(--font-color);
+  border-radius: 3rem;
+  @media screen and (min-width:768px) {
+    width: 402px;
+    height: 80vh;    
+  }
+}
+/**** start-screen ***/
+.start-screen{
+  height: 100%;
+  text-align: center;
+  @include flex-layout(column,space-around);
+  gap: 3rem;
+  h1{
+    font-size: 3rem;
+  }
+  .input-form{
+    @include flex-layout(column);
+    gap: 0.7rem;
+    button{
+      @include round-button();
+      font-size: 1.5rem;
+    }
+    input{
+      display: block;
+      width: 100%;
+      font-size: 1.5rem;
+      padding: 0.7rem 1rem;
+      border-radius: 3rem;
+      border: none;
+    }
+  }
+}
+
+/**** Game Screen ****/
+.game-screen{
+  height: 100%;
+  padding: 1.2rem;
+  @include flex-layout(column);
+  .word-list {
+    overflow: auto;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    flex: 1;
+    width: 100%;
+    li {
+      margin: 0.3rem 0;
+      @include flex-center;
+      gap: 0.7rem;
+      justify-content: flex-start;
+      &:nth-child(odd){
+        background-color: var(--main-color);
+        color: var(--font-color);
+      }
+      &:nth-child(even){
+        flex-direction: row-reverse;
+        text-align: right;
+      }
+      span:nth-child(1){
+      }
+      span:nth-child(2){
+        // border: 1px solid #eee;
+        @include round-button();
+        width: auto;
+      }
+    }
+  }
+  .game-form{
+    width: 100%;
+    @include flex-layout(row, flex-start, center);
+    gap: 0.7rem;
+    input {
+      display: block;
+      flex: 1;
+      @include round-button();
+    }
+    button{
+      @include round-button();
+      width: 10%;
+    }
+  }
+}
+.loading {
+  margin: 0.5rem 0;
+}
